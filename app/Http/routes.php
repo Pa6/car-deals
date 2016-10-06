@@ -18,8 +18,10 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'api/v1'], function () {
     Route::post('authenticate', 'AuthenticationController@authenticate');
+    Route::get('roles', 'RolesController@index');
     Route::group(['middleware'=>['jwt.auth']], function(){
 
+        Route::resource('users', 'UsersController');
 
     });
 
