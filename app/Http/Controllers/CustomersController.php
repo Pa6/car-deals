@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use Bican\Roles\Models\Role;
+use App\Customer;
+use App\IdModels;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Validator;
+use Tymon\JWTAuth\Claims\Custom;
 
-class UsersController extends Controller
+class CustomersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,11 +24,10 @@ class UsersController extends Controller
     {
         $user = Auth::user();
         if($user){
-            return JsonResponse::create(User::all());
-        }else{
-            return JsonResponse::create(['error' => 'access_denied'],401);
+            return JsonResponse::create(Custom::All());
         }
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -39,23 +38,23 @@ class UsersController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'email' => 'email|required|unique:users,email',
-            'username' => 'required',
-            'password' => 'required|min:4|confirmed',
-            'password_confirmation' => 'required|min:4',
-            'role_id' => 'required'
+            'chasis_number' => 'chasis_number|required|unique:customers,chasis_number',
+            'name' => 'required',
+            'id_card' => 'required',
+            'model_id' => 'required',
+            'telephone' => 'required',
+            'vehicle_reg_number'=> 'required',
+            'chasis_number' => 'required',
+            'engine_number' => 'required',
+            'selling_price' => 'required',
         ];
         $validation = Validator::make(Input::all(), $rules);
         if ($validation->fails()) {
             return response()->json($validation->messages(),422);
         }
-
-        $role = Role::where('id',$request['role_id'])->first();
-        if(!$role){
-            return JsonResponse::create(['error' => 'role_not_found'],404);
-        }
-        $request->merge(['role_id' => $role->id]);
-        User::create($request->all());
+        $model = IdModels::find(Input::get('model_id'));
+        $request->merge(['model_id' => $model->id]);
+        Customer::create($request->all());
         return JsonResponse::create(['message' => 'success'],200);
     }
 
@@ -67,13 +66,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        $user = Auth::user();
-        if($user){
-            return JsonResponse::create(User::where('id',$id)->first());
-        }
-        else{
-            return JsonResponse::create(['message' => 'access_denied'],401);
-        }
+        //
     }
 
     /**
@@ -84,7 +77,7 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-
+        //
     }
 
     /**
@@ -96,21 +89,7 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $userauth = Auth::user();
-        $user = User::findOrFail($id);
-
-        if($userauth->id == $user->id){
-            $data = Input::all();
-            if(Input::get('password')){
-
-                exit("here");
-                $user->password = Hash::make(Input::get('password'));
-            }
-            $user->update($data);
-            return JsonResponse::create(['message' => 'success'],200);
-        }else{
-            return JsonResponse::create(['error' => 'access_denied'],401);
-        }
+        //
     }
 
     /**
@@ -121,12 +100,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = Auth::user();
-        if($user->is('owner') || $user->is('admin')){
-            $user_exist = User::find($id);
-            if($user_exist->id == $user->id){
-                
-            }
-        }
+        //
     }
 }

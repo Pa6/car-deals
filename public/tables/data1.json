@@ -1,0 +1,107 @@
+[
+    {
+        "id": 0,
+        "name": "samuel",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 1,
+        "name": "samson",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 2,
+        "name": "sarah",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 3,
+        "name": "Kimani",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 4,
+        "name": "Elizabeth",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 5,
+        "name": "Clement",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 6,
+        "name": "Cyrus",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 7,
+        "name": "Edward",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 8,
+        "name": "Seroul",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 9,
+        "name": "Daniel",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 10,
+        "name": "carol",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 11,
+        "name": "Pascal",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 12,
+        "name": "Peter",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 13,
+        "name": "James",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 14,
+        "name": "Nivea",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 15,
+        "name": "Robert",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 16,
+        "name": "Victor",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 17,
+        "name": "Anabel",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 18,
+        "name": "Michael",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 19,
+        "name": "Mc Jones",
+        "price": "Ksh 200,000"
+    },
+    {
+        "id": 20,
+        "name": "Staneely",
+        "price": "Ksh 200,000"
+    }
+]

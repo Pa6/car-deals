@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customers</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<!--Icons-->
+<script src="js/lumino.glyphs.js"></script>
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><span>OceanCross</span>Auto</a>
+				<ul class="user-menu">
+					<li class="dropdown pull-right">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> User <span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
+							<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li>
+							<li><a href="#"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+							
+		</div><!-- /.container-fluid -->
+	</nav>
+		
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li class="active"><a href="index.html"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
+            <li><a href="Customers.html"><svg class="glyph stroked male user"><use xlink:href="#stroked-male-user"></use></svg>Customers</a></li>
+            <li><a href="suppliers.html"><svg class="glyph stroked male user"><use xlink:href="#stroked-male-user"></use></svg>Suppliers</a></li>
+            
+			<li><a href="users.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg>Users</a></li>
+			<li><a href="charts.html"><svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg> Sales</a></li>
+			<li><a href="Invoices.html"><svg class="glyph stroked table"><use xlink:href="#stroked-table"></use></svg>Invoices</a></li>
+			<li><a href="forms.html"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>
+			<li><a href="panels.html"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>
+			<li><a href="icons.html"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Icons</a></li>
+            <li class="parent 1 ">
+				<a href="#">
+					<span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked calendar"><use xlink:href="#stroked-chevron-down"></use></svg></span> Reports
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+                    <li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>Account Statement
+						</a>
+					</li>
+                    <li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Income Reports
+						</a>
+					</li>
+                    <li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Expense
+						</a>
+					</li>
+                    <li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Income vs Expense
+						</a>
+					</li>
+                    <li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Report by Date
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Report by Month
+						</a>
+					</li>
+					<li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg>All Income
+						</a>
+					</li>
+                    
+					<li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> All Purchases
+						</a>
+					</li>
+                    <li>
+						<a class="" href="#">
+							<svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> All Transactions
+						</a>
+					</li>
+				</ul>
+			</li>
+			
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>
+		</ul>
+
+	</div><!--/.sidebar-->
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		
+	
+		<div class="row">
+			<div class="col-lg-12">
+				<h2>Customer Panel</h2>
+			</div>
+			
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-body tabs">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab">All Customer</a></li>
+							<li><a href="#tab2" data-toggle="tab">Add New</a></li>
+							<!--<li><a href="#tab3" data-toggle="tab">Tab 3</a></li>-->
+						</ul>
+		
+						<div class="tab-content">
+							<div class="tab-pane fade in active" id="tab1">
+								<h4>Have the Customer Populated table here</h4>
+								
+							</div>
+							<div class="tab-pane fade" id="tab2">
+								<!--<h4>Add New Client Forms</h4>-->
+								<!--Add the widget panels here to have te forms -->
+                                <div class="col-md-6">
+				<div class="panel panel-blue">
+					<div class="panel-heading dark-overlay">Personal Details</div>
+					<div class="panel-body">
+						<!--Add the personal detail forms-->
+                         <form role="form">
+							
+								<div class="form-group">
+									<!--<label>Text Input</label>-->
+									<input class="form-control" placeholder="Name">
+								</div>
+                            <div class="form-group">
+									<!--<label>Text Input</label>-->
+									<input class="form-control" placeholder="ID/Passport">
+								</div>
+                            <div class="form-group">
+									<!--<label>Text Input</label>-->
+									<input class="form-control" placeholder="Telephone">
+								</div>
+                             <!--Date of the agreement here-->
+                        </form>
+					</div>
+				</div>
+			</div>
+                              <div class="col-md-6">
+				<div class="panel panel-teal">
+					<div class="panel-heading dark-overlay">Agreement Details</div>
+					<div class="panel-body">
+						<!--Agreement Details-->
+                        <div class="form-group">
+									<label>Agreed Units</label>
+									<input class="form-control" placeholder="Enter Units here">
+								</div>
+                         <div class="form-group">
+									<label>On Behalf Of?</label>
+									<input class="form-control" placeholder="Name">
+								</div>
+					</div>
+				</div>
+			</div>
+                                <div class="col-md-6">
+				<div class="panel panel-orange">
+					<div class="panel-heading dark-overlay">Mv Reg Details</div>
+					<div class="panel-body">
+						<!--Agreement Details-->
+                        <form role="form">
+                         <div class="form-group">
+									<!--<label>On Behalf Of?</label>-->
+									<input class="form-control" placeholder="Vehicle reg Number">
+								</div>
+                         <div class="form-group">
+									<!--<label>On Behalf Of?</label>-->
+									<input class="form-control" placeholder="Chasis Number">
+								</div>
+                            <div class="col-md-5">
+                           <div class="form-group">
+									<label>Select Model</label>
+									<select class="form-control">
+										<option>Model 1</option>
+										<option>Model 2</option>
+										<option>Model 3</option>
+										<option>model 4</option>
+									</select>
+								</div>
+                            </div>
+                             <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Engine Number</label>
+									<input class="form-control" placeholder="Enter Engine number">
+								</div>
+                            </div>
+                            <div class="form-group">
+									<!--<label>On Behalf Of?</label>-->
+									<input class="form-control" placeholder="Ratting">
+								</div>
+                            <!--the colour picker feature-->
+                            <div class="form-group">
+           <!-- <label for="" class=""></label>-->
+                <div class="dropdown">
+                            <button class="btn _select_color dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Green<span class="caret _right"></span>
+                            <span _text_display="Green" class="color green"></span></button>
+                            <ul class="dropdown-menu _select_color_drop" aria-labelledby="dropdownMenu1">
+                                <li><span _text_display="Green" class="color green"></span></li>
+                                <li><span _text_display="Red" class="color red"></span></li>
+                                <li><span _text_display="Yellow" class="color yellow"></span></li>
+                                <li><span _text_display="Brown" class="color brown"></span></li>
+                                <li><span _text_display="Orange" class="color orange"></span></li>
+                                <li><span _text_display="Pink" class="color pink"></span></li>
+                                <li><span _text_display="Silver" class="color silver"></span></li>
+                                <li><span _text_display="Bule" class="color blue"></span></li>
+                                <li><span _text_display="TEAL" class="color TEAL"></span></li>
+                                <li><span _text_display="NAVY" class="color NAVY"></span></li>
+                                <li><span _text_display="PURPLE" class="color PURPLE"></span></li>
+                                <li><span _text_display="OLIVE" class="color OLIVE"></span></li>
+                                <li><span _text_display="LIME" class="color LIME"></span></li>
+                            <input type="hidden" name="_color" value="Green"></ul>
+                        </div>
+                    </div>
+        </div>
+                        </form>
+					</div>
+				</div>
+                                 <div class="col-md-6">
+				<div class="panel panel-red">
+					<div class="panel-heading dark-overlay">Payment Details</div>
+					<div class="panel-body">
+						<!--Add the payment Buttons-->
+                        <div class="form-group">
+									<!--<label>On Behalf Of?</label>-->
+									<input class="form-control" placeholder="Selling Price">
+								</div>
+                         <div class="form-group">
+									<!--<label>On Behalf Of?</label>-->
+									<input class="form-control" placeholder="Amount in Words">
+								</div>
+                         <div class="col-md-5">
+                           <div class="form-group">
+									<label>Mode of payment</label>
+									<select class="form-control">
+										<option>Cheque</option>
+										<option>Direct Deposit</option>
+										
+									</select>
+								</div>
+                            </div>
+                             <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Cheque Amount</label>
+									<input class="form-control" placeholder="Enter Amount Ksh">
+								</div>
+                            </div>
+                        <h3>Instalments</h3>
+                         <div class="col-md-5">
+                            <div class="form-group">
+                                <label>First instalment</label>
+									<input class="form-control" placeholder="Enter Amount Ksh">
+								</div>
+                            </div>
+                         <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Date</label>
+									<input class="form-control" placeholder="Enter Date DD/MM/YY">
+								</div>
+                            </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Second instalment</label>
+									<input class="form-control" placeholder="Enter Amount Ksh">
+								</div>
+                            </div>
+                         <div class="col-md-5">
+                            <div class="form-group">
+                                <label>Date</label>
+									<input class="form-control" placeholder="Enter Date DD/MM/YY">
+								</div>
+                            </div>
+                        <!-- end Installments Space-->
+                        
+					</div>
+				</div>
+			</div>
+                                <!--Add the save and upload here-->
+                            <div class="col-md-6">
+				<div class="panel panel-blue">
+					<div class="panel-heading dark-overlay">Uploads</div>
+					<div class="panel-body">
+						<!--the file input here-->
+                        <div class="col-md-5">
+                        <div class="form-group">
+                            
+									<label>Upload ID/Pasport Scan</label>
+									<input type="file">
+                            </div>
+								</div>
+                        <div class="col-md-5">
+                        <div class="form-group">
+                            
+									<label>Upload Manual Filled Form</label>
+									<input type="file">
+                            </div>
+                        
+					</div>
+                        <div class="col-md-5">
+                        <div class="form-group">
+                            
+									<label>Upload Copy of Cheques</label>
+									<input type="file">
+                            </div>
+				</div>
+                        <div class="col-md-5">
+                        <div class="form-group">
+                           
+									<label>Upload supporting Document</label>
+									<input type="file">
+                            </div>
+			</div><!--/.col-->
+			<!--/.col-->
+			    
+			</div>
+                       
+                   
+                               
+							</div>
+							
+						</div>
+					</div>
+				</div><!--/.panel-->
+			</div><!--/.col-->
+			
+		
+			
+		</div><!-- /.row -->
+		
+	</div><!--/.main-->
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script>
+		!function ($) {
+			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
+				$(this).find('em:first').toggleClass("glyphicon-minus");	  
+			}); 
+			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+	</script>	
+</body>
+
+</html>
