@@ -37,7 +37,7 @@ class CreateCustomersTables extends Migration
             $table->string('file3')->nullable();
             $table->string('file4')->nullable();
             $table->string('file5')->nullable();
-            $table->string('file5')->nullable();
+            $table->string('file6')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
